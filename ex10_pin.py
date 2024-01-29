@@ -1,3 +1,4 @@
+
 import getpass
 
 # Hard-coded correct PIN
@@ -22,6 +23,15 @@ while attempts < max_attempts:
         # you can add other conditions e.g. ..and entered_pin.isdigit() and len(entered_pin) == 4
         print("Success! PIN accepted.")
         break  # Exit loop on success
+    # Check if the supplied PIN matches the correct PIN
+    # Added one more if statement if the attempt is less than max_attempt
+    # This if statement will print a warning if supplied_pin is not equal to 4
+    if len(entered_pin) != 4:
+        print("Please enter a valid 4-digit number.")
+
+    if entered_pin == correct_pin:
+        print("PIN verification successful")
+        break
     else:
         attempts = attempts + 1
         remaining_attempts = max_attempts - attempts
@@ -33,7 +43,7 @@ if attempts == max_attempts:
     print("You have exceeded the maximum number of attempts. Access denied.")
 
 
-# other methods:
+# Another method:
 # for attempt in range(max_attempts):  # Ask the user to supply the PIN
 #     supplied_pin = input("Please enter your PIN: ")
 #     if supplied_pin == correct_pin:  # Check if the supplied PIN matches the correct PIN
