@@ -1,3 +1,5 @@
+# Optional - hide the characters you type
+import getpass
 # Correct PIN
 correct_pin = "1278"
 
@@ -6,7 +8,8 @@ max_attempts = 3
 
 for attempt in range(max_attempts):
     # Ask the user to supply the PIN
-    supplied_pin = input("Please enter your PIN: ")
+    # Instead of using input, getpass.getpass is part of Python library module that hides sensitive information
+    supplied_pin = getpass.getpass("Please enter your PIN: ")
 
     # Check if the supplied PIN matches the correct PIN
     # Added one more if statement if the attempt is less than max_attempt
@@ -23,6 +26,7 @@ for attempt in range(max_attempts):
             print(f"Incorrect PIN. {attempts_remaining} attempts remaining.")
         else:
             print("No remaining attempts. Access denied.")
+
 
 
 
