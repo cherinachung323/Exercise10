@@ -69,7 +69,7 @@ for file_name in file_list:
     size = os.path.getsize(file_name)
     if size > 0:
         base_name = os.path.basename(file_name)
-        print(f"{base_name}: {size} bytes")
+        print(f"Name:{base_name}, Size:{size} bytes")
 # the loop runs as above
 # the loop takes the next file from the list as it runs and within the loop
 # os.path.getsize() is a function from the os.path module.
