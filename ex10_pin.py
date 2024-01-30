@@ -24,7 +24,7 @@ while attempts < max_attempts:
         print("Success! PIN accepted.")
         break  # Exit loop on success
     # Check if the supplied PIN matches the correct PIN
-    # Added one more if statement if the attempt is less than max_attempt
+    # Added one more if statement for when the attempt is less than max_attempt
     # This if statement will print a warning if supplied_pin is not equal to 4
     if len(entered_pin) != 4:
         print("Please enter a valid 4-digit number.")
@@ -44,6 +44,7 @@ if attempts == max_attempts:
 
 
 # Another method:
+
 # for attempt in range(max_attempts):  # Ask the user to supply the PIN
 #     supplied_pin = input("Please enter your PIN: ")
 #     if supplied_pin == correct_pin:  # Check if the supplied PIN matches the correct PIN
@@ -55,7 +56,8 @@ if attempts == max_attempts:
 #         print(f"Incorrect PIN. {attempts_remaining} attempts remaining.")
 #     else:
 #         print("No remaining attempts. Access denied.")
-# Instead of remaining attempts = max - (attempts+1), this minuses 1 from max minus attempts
+
+# Instead of remaining attempts = max - (attempts+1), the above code subtracts 1 from max minus attempts
 
 
 
